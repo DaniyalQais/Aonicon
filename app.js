@@ -99,6 +99,18 @@ function initSmoothScroll() {
       if (targetSec) {
         e.preventDefault();
         targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // If trigger has data-service-select, pre-select this service in step 2
+        const serviceToSelect = trigger.getAttribute('data-service-select');
+        if (serviceToSelect) {
+          const matchingCheckbox = document.querySelector(`.choice-checkbox[value="${CSS.escape(serviceToSelect)}"]`);
+          if (matchingCheckbox) {
+            matchingCheckbox.checked = true;
+            const parentCard = matchingCheckbox.closest('.service-choice-card');
+            if (parentCard) parentCard.classList.add('selected');
+          }
+        }
+
         setTimeout(() => {
           leadNameInput?.focus();
         }, 450);
