@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aonicon — Software Development, Digital Marketing & Branding Agency</title>
+  <meta name="description" content="Aonicon is a unified hybrid agency combining software engineering, revenue-driven marketing, and iconic brand identity under one accountable squad.">
+  <meta name="keywords" content="Aonicon, software engineering, digital marketing, brand identity, hybrid agency, UI UX design, custom web app, mobile app development, performance marketing">
+  <meta name="author" content="Aonicon Digital Technologies">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Aonicon — Enterprise Software, Growth Marketing & Branding">
+  <meta property="og:description" content="One Team. Total Execution. Custom software engineering, revenue-driven marketing, and iconic branding under one elite squad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aonicon.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,5 95,28 95,72 50,95 5,72 5,28' fill='%23FFFFFF' stroke='%231A6BE0' stroke-width='8'/><circle cx='50' cy='50' r='18' fill='%231A6BE0'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data for Agency SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Aonicon",
+    "url": "https://aonicon.com",
+    "description": "Full-spectrum digital agency providing software engineering, digital marketing, and brand identity solutions under one roof.",
+    "sameAs": [
+      "https://linkedin.com/company/aonicon",
+      "https://twitter.com/aonicon",
+      "https://github.com/aonicon"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="header-nav" id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo-wrapper" aria-label="Aonicon Home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,6 92,29 92,71 50,94 8,71 8,29" stroke="url(#logo-grad)" stroke-width="8" fill="#FFFFFF"/>
+            <circle cx="50" cy="50" r="16" fill="url(#logo-grad)"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1A6BE0"/>
+                <stop offset="100%" stop-color="#2563EB"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">AONICON<span>.</span></span>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Color Theme" title="Toggle theme">
+          <!-- Populated by JS -->
+        </button>
+        <a href="#contact" class="btn btn-primary" id="header-cta-btn">
+          <span>Book Discovery Call</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="logo-text">AONICON<span>.</span></span>
+        <button id="close-drawer-btn" class="modal-close-btn" aria-label="Close mobile navigation">&times;</button>
+      </div>
+      <div class="mobile-drawer-links">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+        <a href="#about" class="mobile-nav-link">About Us</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">
+        <span>Book Discovery Call</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION (AONICON HYBRID AGENCY SPECIFICATION) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-ambient-glow"></div>
+      <div class="container hero-grid items-center">
+        <div class="hero-content">
+          <!-- Top Pill/Tag -->
+          <div class="tv-pill-badge">
+            <span class="tv-badge-icon">⚡</span>
+            <span class="tv-badge-text">Digital Marketing</span>
+            <span class="tv-badge-dot">•</span>
+            <span class="tv-badge-text">Brand Identity</span>
+            <span class="tv-badge-dot">•</span>
+            <span class="tv-badge-text">Software Engineering</span>
+          </div>
+
+          <!-- Primary Headline (H1) -->
+          <h1 class="hero-title">
+            Build the Product.<br>
+            Grow the Brand.<br>
+            <span class="hero-blue-word">Scale the Revenue.</span>
+          </h1>
+
+          <!-- Subparagraph -->
+          <p class="hero-desc">
+            Aonicon is a hybrid agency that eliminates the friction between creative and technical teams. We build high-performance software, craft unforgettable brand identities, and execute aggressive digital marketing campaigns—all under one roof.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="tv-hero-ctas">
+            <a href="#services" class="tv-btn tv-btn-primary">
+              <span>Explore Aonicon Services</span>
+              <span class="tv-btn-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </span>
+            </a>
+            <a href="#contact" class="tv-btn tv-btn-secondary">
+              <span>Book Discovery Call</span>
+              <span class="tv-btn-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- High-Fidelity 3D UI Graphic -->
+        <div class="hero-3d-visual-wrapper">
+          <!-- Floating Pillar Micro-Badges -->
+          <div class="floating-pillar-pill pill-marketing">
+            <span class="pillar-pill-icon">📈</span>
+            <div class="pillar-pill-content">
+              <strong>+248% YoY Revenue</strong>
+              <span>Performance Marketing</span>
+            </div>
+          </div>
+
+          <div class="floating-pillar-pill pill-branding">
+            <span class="pillar-pill-icon">🎨</span>
+            <div class="pillar-pill-content">
+              <strong>Design Tokens v3.2</strong>
+              <span>Atomic Brand System</span>
+            </div>
+          </div>
+
+          <div class="floating-pillar-pill pill-software">
+            <span class="pillar-pill-icon">💻</span>
+            <div class="pillar-pill-content">
+              <strong>99.99% SLA Edge</strong>
+              <span>Cloud Microservices</span>
+            </div>
+          </div>
+
+          <!-- Main 3D UI Graphic Card -->
+          <div class="hero-3d-card">
+            <img 
+              src="aonicon_hero_dashboard.jpg" 
+              alt="Aonicon Unified Digital Architecture — Marketing Analytics, Brand Systems, and Software Engineering" 
+              class="hero-3d-graphic"
+              width="1920" 
+              height="1080" 
+              loading="eager" 
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Metrics Bar -->
+      <div class="container hero-metrics-container">
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <span class="metric-value"><span class="metric-val-num">380</span><span>+</span></span>
+            <span class="metric-label">Delivered Projects</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value"><span class="metric-val-num">150</span><span>+</span></span>
+            <span class="metric-label">Global Enterprise Clients</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value"><span class="metric-val-num">98</span><span>%</span></span>
+            <span class="metric-label">Client Retention</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value"><span class="metric-val-num">15</span><span>+</span></span>
+            <span class="metric-label">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         1. SERVICES SECTION
+         A clean horizontal grid of 3 compact cards (Software Engineering, 
+         Digital Marketing, Brand Identity). Minimalist icons and only 
+         2 sentences of description per card to keep it short.
+         ===================================================================== -->
+    <section class="services-compact-section" id="services" aria-label="Services">
+      <div class="container">
+        <div class="section-compact-header">
+          <div class="compact-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Core Capabilities</span>
+          </div>
+          <h2 class="compact-heading">
+            Integrated Execution Across <span class="text-blue">Three Disciplines</span>
+          </h2>
+          <p class="compact-subheading">
+            Eliminate agency hand-off friction with senior cross-functional squads engineered for high commercial velocity.
+          </p>
+        </div>
+
+        <div class="services-compact-grid">
+          <!-- Card 1: Software Engineering -->
+          <article class="service-compact-card">
+            <div class="service-compact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="service-compact-title">Software Engineering</h3>
+            <p class="service-compact-desc">
+              We engineer resilient cloud-native platforms, high-velocity web applications, and enterprise APIs designed for global scale. Sub-second performance and clean architecture ensure zero technical debt as your user base expands.
+            </p>
+            <div class="service-compact-tags">
+              <span class="compact-tag">Custom Web & SaaS</span>
+              <span class="compact-tag">Cloud & DevOps</span>
+              <span class="compact-tag">Mobile Engineering</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Digital Marketing -->
+          <article class="service-compact-card">
+            <div class="service-compact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 6l-9.5 9.5-5-5L1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <h3 class="service-compact-title">Digital Marketing</h3>
+            <p class="service-compact-desc">
+              We execute full-funnel customer acquisition campaigns across paid media, programmatic SEO, and conversion rate optimization. Precision attribution and continuous experimentation turn ad spend into predictable revenue growth.
+            </p>
+            <div class="service-compact-tags">
+              <span class="compact-tag">Performance PPC</span>
+              <span class="compact-tag">Technical SEO</span>
+              <span class="compact-tag">CRO & Funnels</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Brand Identity -->
+          <article class="service-compact-card">
+            <div class="service-compact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/>
+              </svg>
+            </div>
+            <h3 class="service-compact-title">Brand Identity</h3>
+            <p class="service-compact-desc">
+              We create distinctive visual identities, scalable Figma design systems, and intuitive user experiences that command premium positioning. Every interface is crafted to evoke trust and convert high-intent enterprise buyers.
+            </p>
+            <div class="service-compact-tags">
+              <span class="compact-tag">Design Systems</span>
+              <span class="compact-tag">UI/UX Architecture</span>
+              <span class="compact-tag">Brand Strategy</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         2. PORTFOLIO SECTION
+         Display 3 KPI-focused case study cards in a single row.
+         Highlight hard numbers and results (e.g., +200% ROI, 99.9% Uptime)
+         instead of long text paragraphs.
+         ===================================================================== -->
+    <section class="portfolio-compact-section" id="portfolio" aria-label="Portfolio">
+      <div class="container">
+        <div class="section-compact-header">
+          <div class="compact-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>Proven Impact</span>
+          </div>
+          <h2 class="compact-heading">
+            Hard Numbers. <span class="text-blue">Zero Fluff.</span>
+          </h2>
+          <p class="compact-subheading">
+            Real commercial outcomes and technical breakthroughs delivered across our portfolio.
+          </p>
+        </div>
+
+        <div class="portfolio-compact-grid">
+          <!-- Card 1: AuraPay Global -->
+          <article class="portfolio-kpi-card">
+            <div class="kpi-card-header">
+              <span class="kpi-card-client">AuraPay Global</span>
+              <span class="kpi-card-badge">Software & Cloud</span>
+            </div>
+            <div class="kpi-primary-stat">
+              <span class="kpi-big-number">99.99%</span>
+              <span class="kpi-stat-label">Surge Uptime SLA</span>
+            </div>
+            <div class="kpi-secondary-row">
+              <div class="kpi-mini-stat">
+                <strong>+200% ROI</strong>
+                <span>Cloud Efficiency</span>
+              </div>
+              <div class="kpi-mini-stat">
+                <strong>320ms</strong>
+                <span>Global Latency</span>
+              </div>
+            </div>
+            <div class="kpi-result-pill">
+              <span class="result-check">&#10003;</span>
+              <span>Saved 44% in Annual Cloud Spend</span>
+            </div>
+            <p class="kpi-impact-line">
+              Re-engineered global payment routing on AWS EKS with zero transaction drops at $42M+ monthly GMV.
+            </p>
+          </article>
+
+          <!-- Card 2: NeuroScale AI -->
+          <article class="portfolio-kpi-card">
+            <div class="kpi-card-header">
+              <span class="kpi-card-client">NeuroScale AI</span>
+              <span class="kpi-card-badge">Growth Marketing</span>
+            </div>
+            <div class="kpi-primary-stat">
+              <span class="kpi-big-number">+340%</span>
+              <span class="kpi-stat-label">Inbound SQL Volume</span>
+            </div>
+            <div class="kpi-secondary-row">
+              <div class="kpi-mini-stat">
+                <strong>4.2x ROAS</strong>
+                <span>Blended Paid Ads</span>
+              </div>
+              <div class="kpi-mini-stat">
+                <strong>-68% CAC</strong>
+                <span>Acquisition Cost</span>
+              </div>
+            </div>
+            <div class="kpi-result-pill">
+              <span class="result-check">&#10003;</span>
+              <span>$14.2M Enterprise Pipeline Generated</span>
+            </div>
+            <p class="kpi-impact-line">
+              Omnichannel paid search and programmatic SEO funnels generating enterprise qualified leads at scale.
+            </p>
+          </article>
+
+          <!-- Card 3: Kinetix Mobility -->
+          <article class="portfolio-kpi-card">
+            <div class="kpi-card-header">
+              <span class="kpi-card-client">Kinetix Mobility</span>
+              <span class="kpi-card-badge">Branding & UI/UX</span>
+            </div>
+            <div class="kpi-primary-stat">
+              <span class="kpi-big-number">+82%</span>
+              <span class="kpi-stat-label">Task Efficiency Lift</span>
+            </div>
+            <div class="kpi-secondary-row">
+              <div class="kpi-mini-stat">
+                <strong>94/100</strong>
+                <span>SUS Usability Score</span>
+              </div>
+              <div class="kpi-mini-stat">
+                <strong>3x Faster</strong>
+                <span>Dev Handoff</span>
+              </div>
+            </div>
+            <div class="kpi-result-pill">
+              <span class="result-check">&#10003;</span>
+              <span>Directly Led to $180M Acquisition Exit</span>
+            </div>
+            <p class="kpi-impact-line">
+              Unified atomic design system and mission-critical telematics dispatcher UI adopted by enterprise fleets.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. ABOUT US SECTION
+         A very short, punchy section with a 2-column layout.
+         Left side: A bold heading "One Team. Total Execution."
+         Right side: A short 3-line paragraph explaining that Aonicon is a unified 
+         hybrid agency, eliminating the need to hire multiple teams.
+         ===================================================================== -->
+    <section class="about-compact-section" id="about" aria-label="About Us">
+      <div class="container">
+        <div class="about-compact-card">
+          <div class="about-compact-grid">
+            <!-- Left Side: Bold Heading & Badges -->
+            <div class="about-left-col">
+              <div class="compact-eyebrow">
+                <span class="eyebrow-dot"></span>
+                <span>The Hybrid Advantage</span>
+              </div>
+              <h2 class="about-main-heading">
+                One Team.<br>
+                <span class="text-blue">Total Execution.</span>
+              </h2>
+              <div class="about-badge-strip">
+                <span class="about-stat-chip">1 Dedicated Squad</span>
+                <span class="about-stat-chip">3 Integrated Disciplines</span>
+                <span class="about-stat-chip">0 Vendor Hand-Offs</span>
+              </div>
+            </div>
+
+            <!-- Right Side: Short 3-Line Paragraph & Direct Benefits -->
+            <div class="about-right-col">
+              <p class="about-para">
+                Aonicon is a unified hybrid agency combining elite software engineering, revenue-driven marketing, and iconic brand design under one accountable roof.
+              </p>
+              <p class="about-para">
+                By eliminating the friction of managing separate vendors, our single agile squad delivers unified commercial roadmaps with zero hand-off delays or finger-pointing.
+              </p>
+              <p class="about-para">
+                You get a single collaborative partner focused entirely on building your product, scaling your acquisition, and accelerating measurable bottom-line revenue.
+              </p>
+              <div class="about-check-list">
+                <div class="about-check-item">
+                  <span class="check-icon">&#10003;</span>
+                  <span>Marketing tracking natively engineered into code from day one</span>
+                </div>
+                <div class="about-check-item">
+                  <span class="check-icon">&#10003;</span>
+                  <span>Single commercial roadmap & direct senior architect access</span>
+                </div>
+                <div class="about-check-item">
+                  <span class="check-icon">&#10003;</span>
+                  <span>100% Client IP ownership with zero vendor lock-in traps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. CONTACT / CONVERSION SECTION
+         A clean, high-intent lead capture area at the very bottom.
+         Include a simple, modern 3-step form (Name/Email, Service Needed, Timeline)
+         and a prominent "Book a Discovery Call" primary button.
+         ===================================================================== -->
+    <section class="contact-conversion-section" id="contact" aria-label="Book a Discovery Call">
+      <div class="container">
+        <div class="contact-box-container">
+          <div class="section-compact-header">
+            <div class="compact-eyebrow">
+              <span class="eyebrow-dot"></span>
+              <span>High-Intent Discovery</span>
+            </div>
+            <h2 class="compact-heading">
+              Ready to Scale? <span class="text-blue">Book a Discovery Call.</span>
+            </h2>
+            <p class="compact-subheading">
+              Configure your requirements below. Receive an NDA-protected delivery brief within 24 hours.
+            </p>
+          </div>
+
+          <!-- 3-Step Lead Form Card -->
+          <div class="conversion-form-card">
+            <!-- Step Progress Indicator -->
+            <div class="form-steps-nav">
+              <div class="form-step-pill active" data-step-indicator="1">
+                <span class="step-num-badge">1</span>
+                <span>Contact Details</span>
+              </div>
+              <div class="step-connector-line"></div>
+              <div class="form-step-pill" data-step-indicator="2">
+                <span class="step-num-badge">2</span>
+                <span>Service Needed</span>
+              </div>
+              <div class="step-connector-line"></div>
+              <div class="form-step-pill" data-step-indicator="3">
+                <span class="step-num-badge">3</span>
+                <span>Timeline</span>
+              </div>
+            </div>
+
+            <form id="conversion-lead-form" onsubmit="return false;" novalidate>
+              <!-- STEP 1: Name / Email -->
+              <div class="form-step-panel active" data-step-panel="1">
+                <div class="form-step-intro">
+                  <h3 class="panel-step-title">Step 1: Who are we speaking with?</h3>
+                  <p class="panel-step-sub">We will route your discovery call to the appropriate Solutions Architect.</p>
+                </div>
+                <div class="form-fields-grid">
+                  <div class="form-field-group">
+                    <label for="lead-name">Your Full Name <span class="req">*</span></label>
+                    <input type="text" id="lead-name" class="form-text-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+                    <span class="field-error-msg" id="err-lead-name">Please enter your name</span>
+                  </div>
+                  <div class="form-field-group">
+                    <label for="lead-email">Work Email Address <span class="req">*</span></label>
+                    <input type="email" id="lead-email" class="form-text-input" placeholder="alex@company.com" required autocomplete="email">
+                    <span class="field-error-msg" id="err-lead-email">Please enter a valid work email</span>
+                  </div>
+                  <div class="form-field-group full-width">
+                    <label for="lead-company">Company / Venture Name <span class="opt">(Optional)</span></label>
+                    <input type="text" id="lead-company" class="form-text-input" placeholder="e.g. Acme Health Technologies" autocomplete="organization">
+                  </div>
+                </div>
+                <div class="form-actions-row justify-end">
+                  <button type="button" class="btn btn-primary btn-next-step" id="btn-to-step-2">
+                    <span>Continue: Choose Service</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 2: Service Needed -->
+              <div class="form-step-panel" data-step-panel="2">
+                <div class="form-step-intro">
+                  <h3 class="panel-step-title">Step 2: What solution does your project need?</h3>
+                  <p class="panel-step-sub">Select one or more core services required for your initiative.</p>
+                </div>
+                <div class="services-select-grid">
+                  <label class="service-choice-card selected">
+                    <input type="checkbox" name="services" value="Software Engineering" checked class="choice-checkbox">
+                    <div class="choice-check-icon">&#10003;</div>
+                    <div class="choice-card-body">
+                      <div class="choice-title">Software Engineering</div>
+                      <div class="choice-desc">Custom Web SaaS, Mobile Apps, APIs & Cloud</div>
+                    </div>
+                  </label>
+
+                  <label class="service-choice-card">
+                    <input type="checkbox" name="services" value="Digital Marketing" class="choice-checkbox">
+                    <div class="choice-check-icon">&#10003;</div>
+                    <div class="choice-card-body">
+                      <div class="choice-title">Digital Marketing</div>
+                      <div class="choice-desc">Performance PPC, Technical SEO, CRO Funnels</div>
+                    </div>
+                  </label>
+
+                  <label class="service-choice-card">
+                    <input type="checkbox" name="services" value="Brand Identity" class="choice-checkbox">
+                    <div class="choice-check-icon">&#10003;</div>
+                    <div class="choice-card-body">
+                      <div class="choice-title">Brand Identity</div>
+                      <div class="choice-desc">Visual Systems, Figma UI/UX, Design Tokens</div>
+                    </div>
+                  </label>
+
+                  <label class="service-choice-card">
+                    <input type="checkbox" name="services" value="Full Hybrid Suite" class="choice-checkbox">
+                    <div class="choice-check-icon">&#10003;</div>
+                    <div class="choice-card-body">
+                      <div class="choice-title">Full Hybrid Suite</div>
+                      <div class="choice-desc">Unified Triad: Engineering + Growth + Brand</div>
+                    </div>
+                  </label>
+                </div>
+                <span class="field-error-msg" id="err-lead-service">Please select at least one service</span>
+
+                <div class="form-actions-row">
+                  <button type="button" class="btn btn-secondary btn-prev-step" id="btn-back-to-step-1">
+                    &larr; Back
+                  </button>
+                  <button type="button" class="btn btn-primary btn-next-step" id="btn-to-step-3">
+                    <span>Continue: Set Timeline</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 3: Timeline & Discovery Button -->
+              <div class="form-step-panel" data-step-panel="3">
+                <div class="form-step-intro">
+                  <h3 class="panel-step-title">Step 3: What is your target timeline?</h3>
+                  <p class="panel-step-sub">Select your execution cadence and any goals.</p>
+                </div>
+                <div class="timeline-select-grid">
+                  <label class="timeline-choice-card">
+                    <input type="radio" name="timeline" value="Rapid Sprint (4–6 Weeks)" class="timeline-radio">
+                    <div class="choice-radio-dot"></div>
+                    <div class="choice-card-body">
+                      <div class="choice-title">Rapid Sprint</div>
+                      <div class="choice-desc">4–6 Weeks (High-velocity launch)</div>
+                    </div>
+                  </label>
+
+                  <label class="timeline-choice-card selected">
+                    <input type="radio" name="timeline" value="Standard Cadence (8–12 Weeks)" checked class="timeline-radio">
+                    <div class="choice-radio-dot"></div>
+                    <div class="choice-card-body">
+                      <div class="choice-title">Standard Cadence</div>
+                      <div class="choice-desc">8–12 Weeks (Balanced agile sprints)</div>
+                    </div>
+                  </label>
+
+                  <label class="timeline-choice-card">
+                    <input type="radio" name="timeline" value="Dedicated Retainer Squad" class="timeline-radio">
+                    <div class="choice-radio-dot"></div>
+                    <div class="choice-card-body">
+                      <div class="choice-title">Dedicated Squad</div>
+                      <div class="choice-desc">Ongoing continuous monthly retainer</div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="form-field-group full-width" style="margin-top: 1.25rem;">
+                  <label for="lead-notes">Project Goals or Brief <span class="opt">(Optional)</span></label>
+                  <textarea id="lead-notes" class="form-text-input form-textarea" rows="2" placeholder="Briefly describe what you are looking to build or your revenue target..."></textarea>
+                </div>
+
+                <div class="form-actions-row">
+                  <button type="button" class="btn btn-secondary btn-prev-step" id="btn-back-to-step-2">
+                    &larr; Back
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-submit-lead" id="btn-submit-discovery">
+                    <span>Book a Discovery Call</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+
+                <div class="form-security-footer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <span>Strictly confidential under mutual NDA • 24-hour response SLA guarantee</span>
+                </div>
+              </div>
+            </form>
+
+            <!-- Success State -->
+            <div class="conversion-success-pane" id="conversion-success-state" style="display: none;">
+              <div class="success-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3 class="success-title">Discovery Call Request Confirmed!</h3>
+              <p class="success-desc">
+                Thank you, <strong id="success-client-name" class="text-blue">Alex</strong>. Your project brief has been assigned to our Lead Solutions Architect.
+              </p>
+              <div class="success-summary-box">
+                <div class="summary-line">
+                  <span class="label">Configured Scope:</span>
+                  <span class="val" id="success-summary-services">Software Engineering</span>
+                </div>
+                <div class="summary-line">
+                  <span class="label">Target Timeline:</span>
+                  <span class="val" id="success-summary-timeline">Standard Cadence (8–12 Weeks)</span>
+                </div>
+                <div class="summary-line">
+                  <span class="label">Response Time:</span>
+                  <span class="val" style="color: #10B981; font-weight: 700;">Within 24 Hours</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-reset-conversion">
+                Configure Another Scope
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="#" class="logo-wrapper" aria-label="Aonicon Home">
+            <div class="logo-icon">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,6 92,29 92,71 50,94 8,71 8,29" stroke="url(#logo-grad-ft)" stroke-width="8" fill="#FFFFFF"/>
+                <circle cx="50" cy="50" r="16" fill="url(#logo-grad-ft)"/>
+                <defs>
+                  <linearGradient id="logo-grad-ft" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1A6BE0"/>
+                    <stop offset="100%" stop-color="#2563EB"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">AONICON<span>.</span></span>
+          </a>
+          <p class="footer-brand-p">
+            Architecting digital dominance. High-velocity software engineering, revenue-driven performance marketing, and iconic branding under one unified squad.
+          </p>
+          <div style="font-size: 0.82rem; color: var(--accent-blue); display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">
+            <span class="pulse-dot"></span> Available for Q2–Q4 2026 Engagements
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Book a Discovery Call</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Capabilities</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services">Software Engineering</a></li>
+            <li><a href="#services">Cloud & DevOps Architecture</a></li>
+            <li><a href="#services">Performance Marketing</a></li>
+            <li><a href="#services">Brand Identity & UI/UX</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Contact</h4>
+          <ul class="footer-links-list">
+            <li style="color: var(--text-secondary); font-size: 0.9rem;">San Francisco &bull; London &bull; Dubai</li>
+            <li style="margin-top: 0.75rem;"><a href="mailto:hello@aonicon.com" style="color: var(--accent-blue); font-weight: 700;">hello@aonicon.com</a></li>
+            <li><a href="tel:+18005550199" style="color: var(--text-secondary);">+1 (800) 555-0199</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aonicon Digital Technologies Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security & Compliance</a>
+          <a href="#">SLA Guarantee</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
